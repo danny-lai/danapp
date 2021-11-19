@@ -21,6 +21,14 @@ gem 'jbuilder', '~> 2.7'
 gem 'activerecord-nulldb-adapter'     # seems to replaced  nulldb in rails 6
 gem 'pg'
 
+gem 'activeadmin'
+
+# Plus integrations with:
+gem 'devise'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
