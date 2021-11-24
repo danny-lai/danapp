@@ -23,6 +23,8 @@ gem 'pg'
 
 gem 'activeadmin'
 
+gem "dotenv-rails"
+
 # Plus integrations with:
 gem 'devise'
 gem 'cancancan'
