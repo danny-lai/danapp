@@ -73,4 +73,15 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # Allow requests from domain 'yourcustomdomain.com'
+  Rails.application.config.hosts << 'localhost.ssl'
+
+  # Allow requests from subdomains like 'www.yourcustomdomain.com'
+  # and 'blog.yourcustomdomain.com'.
+  Rails.application.config.hosts << '.localhost.ssl'
+
+  # Allow requests from any domain
+  # Rails.application.config.hosts = nil  
+  
 end
