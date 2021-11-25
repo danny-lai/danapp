@@ -29,7 +29,7 @@ RUN gem install bundler && \
 # Copy application code to the container image
 COPY . /app
 
-ENV RAILS_ENV=development
+ENV RAILS_ENV=production
 ENV RAILS_SERVE_STATIC_FILES=true
 # Redirect Rails log to STDOUT for Cloud Run to capture
 ENV RAILS_LOG_TO_STDOUT=true
@@ -37,6 +37,8 @@ ENV RAILS_LOG_TO_STDOUT=true
 ARG MASTER_KEY
 ENV RAILS_MASTER_KEY=${MASTER_KEY}
 # [END cloudrun_rails_dockerfile_key]
+
+COPY ./config/database.yml /app/config/
 
 # pre-compile Rails assets with master key
 RUN bundle exec rake assets:precompile
